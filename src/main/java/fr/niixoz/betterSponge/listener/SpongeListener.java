@@ -3,7 +3,6 @@ package fr.niixoz.betterSponge.listener;
 import com.jeff_media.customblockdata.CustomBlockData;
 import fr.niixoz.betterSponge.BetterSponge;
 import fr.niixoz.betterSponge.BetterSpongeItem;
-import fr.niixoz.betterSponge.ItemSerializer;
 import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.block.data.Waterlogged;
@@ -13,19 +12,11 @@ import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.block.SpongeAbsorbEvent;
 
 import org.bukkit.event.EventPriority;
-import org.bukkit.event.block.Action;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.inventory.FurnaceSmeltEvent;
-import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class SpongeListener implements Listener {
 
