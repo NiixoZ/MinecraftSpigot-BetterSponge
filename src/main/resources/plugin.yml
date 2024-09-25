@@ -1,0 +1,4 @@
+name: BetterSponge
+version: '1.0'
+main: fr.niixoz.betterSponge.BetterSponge
+api-version: '1.20'
