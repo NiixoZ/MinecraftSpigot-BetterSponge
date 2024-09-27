@@ -13,7 +13,6 @@ import org.bukkit.event.block.SpongeAbsorbEvent;
 
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.block.BlockBreakEvent;
-import org.bukkit.event.inventory.FurnaceSmeltEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
@@ -86,17 +85,5 @@ public class SpongeListener implements Listener {
         ItemStack item = BetterSpongeItem.getItem(event.getBlock().getType() == Material.WET_SPONGE);
         event.getBlock().getWorld().dropItemNaturally(event.getBlock().getLocation(), item);
         customBlockData.remove(betterSpongeKey);
-    }
-
-    @EventHandler (priority = EventPriority.LOWEST)
-    public void onSmeltSponge(FurnaceSmeltEvent event) {
-        ItemStack item = event.getSource();
-        if(event.getSource().getType() != Material.WET_SPONGE) {
-            return;
-        }
-        if (item.getItemMeta() != null && item.getItemMeta().hasCustomModelData() && item.getItemMeta().getCustomModelData() == BetterSponge.BETTER_SPONGE_MODEL_DATA) {
-            ItemStack result = BetterSpongeItem.getItem(false);
-            event.setResult(result);
-        }
     }
 }

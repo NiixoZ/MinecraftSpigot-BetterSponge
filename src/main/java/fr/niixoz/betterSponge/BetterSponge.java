@@ -1,6 +1,7 @@
 package fr.niixoz.betterSponge;
 
 import fr.niixoz.betterSponge.listener.SpongeListener;
+import fr.niixoz.betterSponge.recipes.CustomRecipes;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class BetterSponge extends JavaPlugin {
